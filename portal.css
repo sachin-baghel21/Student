@@ -38,7 +38,7 @@ body {
 }
 
 #section {
-    background: url('/Html/assets/college.png');
+    background: url('college.png');
     background-size: contain;
 }
 
@@ -63,7 +63,7 @@ body {
 }
 
 #profile-pop {
-    background: url('/Html/assets/profile-bg.webp');
+    background: linear-gradient(20deg, whtiesmoke,white);
     background-repeat: no-repeat;
     background-position: 100% left;
     background-size: cover;
