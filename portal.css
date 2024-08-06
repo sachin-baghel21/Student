@@ -61,12 +61,12 @@ body {
     width: 200px;
     height: 100px;
 }
-
 #profile-pop {
-    background: linear-gradient(20deg, whtiesmoke,white);
     background-repeat: no-repeat;
     background-position: 100% left;
     background-size: cover;
+    /* width: 350px;          */
+    /* height: 180px; */
     transition: all 0.3s ease;
     transform: scaley(0.8);
     position: absolute;
