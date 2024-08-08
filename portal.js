@@ -1,21 +1,26 @@
-                                  // Circular Progress bar code
-      
-                                  function setProgress(percent) {
-                                    const progressContainer = document.querySelector('.progress-container');
-                                  const progressText = document.getElementById('progress-text');
-                                  progressContainer.style.setProperty('--progress', `${percent}%`);
-                                  progressText.textContent = `${percent}%`;
+                                     // Circular Progress bar code
+                                  function setProgress(containerId, textId, percent) {
+                                    const progressContainer = document.getElementById(containerId);
+                                    const progressText = document.getElementById(textId);
+                                    progressContainer.style.setProperty('--progress', `${percent}%`);
+                                    progressText.textContent = `${percent}%`;
                                 }
-                            
-                                let progress = 0;
-                                const interval = setInterval(() => {
-                                  if (progress <= 75) {
-                                    setProgress(progress);
-                                    progress++;
-                                  } else {
-                                    clearInterval(interval);
-                                  }
-                                }, 30);
+                                
+                                function animateProgress(containerId, textId, targetPercent) {
+                                    let progress = 0;
+                                    const interval = setInterval(() => {
+                                        if (progress <= targetPercent) {
+                                            setProgress(containerId, textId, progress);
+                                            progress++;
+                                        } else {
+                                            clearInterval(interval);
+                                        }
+                                    }, 25);
+                                }
+                                
+                                animateProgress('progress-container-1', 'progress-text-1', 75); // Set target percentage for Attendance
+                                animateProgress('progress-container-2', 'progress-text-2', 85); // Set target percentage for Percentage
+                                animateProgress('progress-container-3', 'progress-text-3', 90); // Set target percentage for Online Test
 
 var move = document.getElementById('profile-pop');
 const icon = document.getElementById('icon');
