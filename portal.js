@@ -2,8 +2,8 @@
                                   function setProgress(containerId, textId, percent) {
                                     const progressContainer = document.getElementById(containerId);
                                     const progressText = document.getElementById(textId);
-                                    progressContainer.style.setProperty('--progress', `${percent}%`);
-                                    progressText.textContent = `${percent}%`;
+                                    // progressContainer.style.setProperty('--progress', `${percent}%`);
+                                    // progressText.textContent = `${percent}%`;
                                 }
                                 
                                 function animateProgress(containerId, textId, targetPercent) {
